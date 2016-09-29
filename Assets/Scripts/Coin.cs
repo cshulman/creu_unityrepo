@@ -17,6 +17,7 @@ public class Coin : MonoBehaviour {
 	{
 		if(other.gameObject.CompareTag("Player"))
 		{
+			//function so can keep track of all coins caught
 			other.GetComponent<ScoreKeeper>().GotCoin ();
 			Destroy(gameObject);
 		}
