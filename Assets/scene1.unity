@@ -552,6 +552,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012089567136, guid: e245f265e9f5f42cb889ba1da885c2ed,
+        type: 2}
+      propertyPath: fallDelay
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e245f265e9f5f42cb889ba1da885c2ed, type: 2}
   m_IsPrefabParent: 0
@@ -1065,8 +1070,8 @@ MonoBehaviour:
   platform: {fileID: 1641636928}
   horizontalMin: 6.5
   horizontalMax: 14
-  verticleMin: -6
-  verticleMax: 6
+  verticleMin: -4
+  verticleMax: 4
 --- !u!4 &1569917972
 Transform:
   m_ObjectHideFlags: 0
