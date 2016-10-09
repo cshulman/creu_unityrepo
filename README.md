@@ -1,4 +1,4 @@
-Created for CREU project using Unity.
+Created for a CREU project using Unity.
 This game was created based on this  tutorial of a Simple Platform Controller game in Unity, using C# scripts. https://unity3d.com/learn/tutorials/topics/2d-game-creation/creating-basic-platformer-gametutorial.
 
 After completing the tutorial the game consisted of a hero, "Mr. Peanut Guy", who jumped between platforms to catch coins.
@@ -11,3 +11,5 @@ TODO:
  - Add a Game Over / You Win text scene that ends the game once the 4 levels are completed.
  - Add GUI text in the current scenes that display what level and score the player achieved.
  - Add a continue to next level text scene when it is time to advance to the next level. Possibly include Yes/No buttons in these scenes that will allow the user to resume the new level and game at a later time.
+
+To learn more about this project and to see updates as they are available, please visit https://cshulmancreu.wordpress.com/. 
