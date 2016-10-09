@@ -1,5 +1,6 @@
 Created for CREU project using Unity.
-This game was created based on this  tutorial of a Simple Platform Controller game in Unity, using C# scripts. https://unity3d.com/learn/tutorials/topics/2d-game-creation/creating-basic-platformer-gametutorial
+This game was created based on this  tutorial of a Simple Platform Controller game in Unity, using C# scripts. https://unity3d.com/learn/tutorials/topics/2d-game-creation/creating-basic-platformer-gametutorial.
+
 After completing the tutorial the game consisted of a hero, "Mr. Peanut Guy", who jumped between platforms to catch coins.
 
 Since completing the tutorial several features have been added:
