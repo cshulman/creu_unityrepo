@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{B9EF4798-41F2-0FC7-ECBA-36A4B7DFCE13}") = "creu_unityrepo", "Assembly-CSharp.csproj", "{81B2E818-531E-8686-CD37-771EFAF6E68F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81B2E818-531E-8686-CD37-771EFAF6E68F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B2E818-531E-8686-CD37-771EFAF6E68F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B2E818-531E-8686-CD37-771EFAF6E68F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B2E818-531E-8686-CD37-771EFAF6E68F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

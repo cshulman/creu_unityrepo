@@ -6,15 +6,22 @@ public class ScoreKeeper : MonoBehaviour {
 	public int score;
 	public int level;
 
+	//[SerializeField] 
+	public GUIText scoreText;
+
 	// Use this for initialization
 	void Start () 
 	{
 		score = 0;
 		level = 1;
+		scoreText.text = "Score : 0";
+
 	}
 	public void GotCoin()
 	{
 		score++;
+		Debug.Log("Score: " + score);
+		scoreText.text = "Score: " + score;
 
 		//check if need to level up, if score is greater or equal to 10
 		if (score >= 10) 
@@ -24,6 +31,7 @@ public class ScoreKeeper : MonoBehaviour {
 
 			//increment level
 			level++;
+			Debug.Log("Level: " + level);
 
 			//if level is not greater than 4
 			if (level <= 4) 
