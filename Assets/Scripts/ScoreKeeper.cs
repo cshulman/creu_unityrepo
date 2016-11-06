@@ -3,25 +3,36 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class ScoreKeeper : MonoBehaviour {
-	public int score;
+	public static int score;
 	public int level;
 
-	//[SerializeField] 
-	public GUIText scoreText;
+	
+
 
 	// Use this for initialization
 	void Start () 
 	{
+		Debug.Log("in ScoreKeeper's awake");
 		score = 0;
 		level = 1;
-		scoreText.text = "Score : 0";
 
+		ScoreUpdate obj = GetComponent<ScoreUpdate>();
+		obj.scoreText.text = "Score: " + score;
+		Debug.Log(SceneManager.GetActiveScene().name);
 	}
+
 	public void GotCoin()
 	{
-		score++;
+		Debug.Log("in GotCoin");
+		Debug.Log(SceneManager.GetActiveScene().name);
+
+		//score++;
+
+		ScoreUpdate obj = GetComponent<ScoreUpdate>();
+		obj.scoreText.text = "Score: " + score;
+
 		Debug.Log("Score: " + score);
-		scoreText.text = "Score: " + score;
+		Debug.Log(SceneManager.GetActiveScene().name);
 
 		//check if need to level up, if score is greater or equal to 10
 		if (score >= 10) 
@@ -38,6 +49,8 @@ public class ScoreKeeper : MonoBehaviour {
 			{
 				//load the next level
 				SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+				Debug.Log(score);
+				Debug.Log("in GotCoin stmt after loading new scene");
 				//TODO Display on top right or left LEVEL (level)
 			}
 
@@ -45,6 +58,9 @@ public class ScoreKeeper : MonoBehaviour {
 			//Display Game Over/ You Won etc.
 			//end scene etc
 		}
+
+		
+		
 	}
 
 }
