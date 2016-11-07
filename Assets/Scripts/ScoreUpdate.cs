@@ -1,17 +1,19 @@
-﻿using UnityEngine;
+﻿/*
+script is meant to house scoreText component
+*/
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
 public class ScoreUpdate : MonoBehaviour {
 
-	[SerializeField] public Text scoreText;
-	//public int myScore;
+	//[SerializeField] public Text scoreText;
 	
 
 	// Use this for initialization
 	void Start () {
-		//DontDestroyOnLoad(scoreText);
-		//scoreText.text = "Score : " +  ScoreKeeper.score;
+		
 	}
 	
 	// Update is called once per frame

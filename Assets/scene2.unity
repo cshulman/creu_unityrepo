@@ -295,6 +295,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a343c49750384bd185e93cb76a1ed46, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &421862216 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011541823772, guid: 3a343c49750384bd185e93cb76a1ed46,
+    type: 2}
+  m_PrefabInternal: {fileID: 421862215}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &513775039
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,7 +533,6 @@ GameObject:
   - 58: {fileID: 843756046}
   - 95: {fileID: 843756045}
   - 114: {fileID: 843756044}
-  - 114: {fileID: 843756051}
   - 114: {fileID: 843756052}
   m_Layer: 9
   m_Name: hero
@@ -643,19 +648,6 @@ Transform:
   - {fileID: 1513064620}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &843756051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 843756043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84d0d696db4ca423f9d42c91c8841329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 114000011541823772, guid: 3a343c49750384bd185e93cb76a1ed46,
-    type: 2}
 --- !u!114 &843756052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,6 +661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   level: 0
+  scoreText: {fileID: 421862216}
 --- !u!1001 &1059935331
 Prefab:
   m_ObjectHideFlags: 0

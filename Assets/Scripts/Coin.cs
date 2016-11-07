@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Coin : MonoBehaviour {
 
-	public int scoreValue = 1;
+	//public int scoreValue = 1;
 	// Use this for initialization
 	void Start () {
 	
@@ -18,9 +18,11 @@ public class Coin : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if(other.gameObject.CompareTag("Player"))
-		{
+		{   
+			//update score 
+			//ScoreKeeper.score += scoreValue;
+
 			//function so can keep track of all coins caught
-			ScoreKeeper.score += scoreValue;
 			other.GetComponent<ScoreKeeper>().GotCoin ();
 			Destroy(gameObject);
 		}

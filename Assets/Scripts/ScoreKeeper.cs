@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ScoreKeeper : MonoBehaviour {
-	public static int score;
-	public int level;
+	//public static int score;
+	public int score;
+	public  int level;
+	public Text scoreText;
 
 	
 
@@ -12,13 +15,14 @@ public class ScoreKeeper : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		Debug.Log("in ScoreKeeper's awake");
+		Debug.Log("in ScoreKeeper's start");
 		score = 0;
 		level = 1;
+		scoreText.text = "Score: " + score;
 
-		ScoreUpdate obj = GetComponent<ScoreUpdate>();
-		obj.scoreText.text = "Score: " + score;
-		Debug.Log(SceneManager.GetActiveScene().name);
+		// ScoreUpdate obj = GetComponent<ScoreUpdate>();
+		// obj.scoreText.text = "Score: " + score;
+		// Debug.Log(SceneManager.GetActiveScene().name);
 	}
 
 	public void GotCoin()
@@ -26,10 +30,15 @@ public class ScoreKeeper : MonoBehaviour {
 		Debug.Log("in GotCoin");
 		Debug.Log(SceneManager.GetActiveScene().name);
 
-		//score++;
+		score++;
+		Debug.Log("score is now " + score);
+		scoreText.text = "Score: " + score;
 
-		ScoreUpdate obj = GetComponent<ScoreUpdate>();
-		obj.scoreText.text = "Score: " + score;
+
+
+		//update scoreText
+		// ScoreUpdate obj = GetComponent<ScoreUpdate>();
+		// obj.scoreText.text = "Score: " + score;
 
 		Debug.Log("Score: " + score);
 		Debug.Log(SceneManager.GetActiveScene().name);
@@ -39,6 +48,7 @@ public class ScoreKeeper : MonoBehaviour {
 		{
 			//reset score
 			score = 0;
+			scoreText.text = "Score: " + score;
 
 			//increment level
 			level++;
@@ -49,7 +59,7 @@ public class ScoreKeeper : MonoBehaviour {
 			{
 				//load the next level
 				SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
-				Debug.Log(score);
+				//Debug.Log(score);
 				Debug.Log("in GotCoin stmt after loading new scene");
 				//TODO Display on top right or left LEVEL (level)
 			}
