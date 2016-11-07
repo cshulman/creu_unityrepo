@@ -4,13 +4,9 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class ScoreKeeper : MonoBehaviour {
-	//public static int score;
 	public int score;
 	public  int level;
 	public Text scoreText;
-
-	
-
 
 	// Use this for initialization
 	void Start () 
@@ -19,10 +15,6 @@ public class ScoreKeeper : MonoBehaviour {
 		score = 0;
 		level = 1;
 		scoreText.text = "Score: " + score;
-
-		// ScoreUpdate obj = GetComponent<ScoreUpdate>();
-		// obj.scoreText.text = "Score: " + score;
-		// Debug.Log(SceneManager.GetActiveScene().name);
 	}
 
 	public void GotCoin()
@@ -33,12 +25,6 @@ public class ScoreKeeper : MonoBehaviour {
 		score++;
 		Debug.Log("score is now " + score);
 		scoreText.text = "Score: " + score;
-
-
-
-		//update scoreText
-		// ScoreUpdate obj = GetComponent<ScoreUpdate>();
-		// obj.scoreText.text = "Score: " + score;
 
 		Debug.Log("Score: " + score);
 		Debug.Log(SceneManager.GetActiveScene().name);
