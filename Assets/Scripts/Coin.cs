@@ -4,9 +4,21 @@ using System.Collections;
 
 public class Coin : MonoBehaviour {
 
-	//public int scoreValue = 1;
+    public PopUp popupInstance;
+
 	// Use this for initialization
 	void Start () {
+
+		if (popupInstance == null)
+		{
+			popupInstance = GetComponent<PopUp>();
+		}
+		if (popupInstance == null)
+		{
+			print ("null popup");
+		}
+
+
 	
 	}
 	
@@ -19,11 +31,12 @@ public class Coin : MonoBehaviour {
 	{
 		if(other.gameObject.CompareTag("Player"))
 		{   
-			//update score 
-			//ScoreKeeper.score += scoreValue;
+			popupInstance.activateCanvas();
 
 			//function so can keep track of all coins caught
 			other.GetComponent<ScoreKeeper>().GotCoin ();
+			//popupInstance.activateCanvas();
+
 			Destroy(gameObject);
 		}
 	}		

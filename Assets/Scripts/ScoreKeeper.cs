@@ -1,43 +1,58 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.UI;
 
 public class ScoreKeeper : MonoBehaviour {
 	public int score;
-	public  int level;
+	public int level;
+	public int targetScore;
 	public Text scoreText;
+
 
 	// Use this for initialization
 	void Start () 
 	{
 		Debug.Log("in ScoreKeeper's start");
-		score = 0;
-		level = 1;
+
+		score = GameControl.Instance.getScore();
+		level = GameControl.Instance.getLevel();
+		if(level == 0){
+			GameControl.Instance.setLevel(1);
+			level = 1;
+		}
+		Debug.Log("Starting Level: " + level);
+		targetScore = score + 10;
+		Debug.Log("targetScore: " + targetScore);
+		
+		if (scoreText == null)
+			{print ("NULL");}
+		/*GameObject g = GameObject.Find("scoreText");
+		if (g == null)
+		{
+			print("g is also null!");
+		}*/
 		scoreText.text = "Score: " + score;
 	}
 
 	public void GotCoin()
 	{
 		Debug.Log("in GotCoin");
-		Debug.Log(SceneManager.GetActiveScene().name);
 
+		//increment score and display
 		score++;
-		Debug.Log("score is now " + score);
+		GameControl.Instance.setScore(score);
 		scoreText.text = "Score: " + score;
-
 		Debug.Log("Score: " + score);
-		Debug.Log(SceneManager.GetActiveScene().name);
 
 		//check if need to level up, if score is greater or equal to 10
-		if (score >= 10) 
+		if (score >= targetScore) 
 		{
-			//reset score
-			score = 0;
-			scoreText.text = "Score: " + score;
-
-			//increment level
+			//increment level and display
 			level++;
+			GameControl.Instance.setLevel(level);
+			Debug.Log("Level up!");
 			Debug.Log("Level: " + level);
 
 			//if level is not greater than 4
