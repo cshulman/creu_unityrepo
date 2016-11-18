@@ -18,25 +18,23 @@ public class GameControl : MonoBehaviour {
 
 	//sets of data to persist throughout game
 	public int score;
-	public int level;
 
 	// // Use this for initialization
 	void Start () {
-		score = 0;
-		level = 1;
 		Debug.Log("GameControl is started");
+		score = 0;
 	}
 
 	//called before component is enabled
 	//ensure that this instance is not destroyed on load
 	void Awake() {
+		Debug.Log("GameControl is awake");
 		if (Instance == null) {
 			DontDestroyOnLoad (gameObject);
 			Instance = this;
 		} else {
 			Destroy (gameObject);
 		}
-		Debug.Log("GameControl is awake");
 	}
 	
 	// Update is called once per frame
@@ -58,22 +56,6 @@ public class GameControl : MonoBehaviour {
 	{
 		return score;
 	}
-
-	public void setLevel(int n)
-	{
-		score = n;
-	}
-
-	public void increaseLevel (int n)
-	{
-		score += n;
-	}
-
-	public int getLevel()
-	{
-		return score;
-	}
-	
 }
 
 

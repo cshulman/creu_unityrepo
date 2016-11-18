@@ -5,9 +5,10 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class ScoreKeeper : MonoBehaviour {
-	public int score;
-	public int level;
-	public int targetScore;
+	
+	int targetScore;
+	int index;
+
 	public Text scoreText;
 
 
@@ -16,62 +17,36 @@ public class ScoreKeeper : MonoBehaviour {
 	{
 		Debug.Log("in ScoreKeeper's start");
 
-		score = GameControl.Instance.getScore();
-		level = GameControl.Instance.getLevel();
-		if(level == 0){
-			GameControl.Instance.setLevel(1);
-			level = 1;
-		}
-		Debug.Log("Starting Level: " + level);
-		targetScore = score + 10;
+		index = SceneManager.GetActiveScene ().buildIndex;
+		targetScore = 10 * (index + 1);
+		Debug.Log("index + 1: " + (index +1));
 		Debug.Log("targetScore: " + targetScore);
-		
-		if (scoreText == null)
-			{print ("NULL");}
-		/*GameObject g = GameObject.Find("scoreText");
-		if (g == null)
-		{
-			print("g is also null!");
-		}*/
-		scoreText.text = "Score: " + score;
+
+		scoreText.text = "Score: " + GameControl.Instance.getScore();
 	}
 
-	public void GotCoin()
+	//function increases score
+	public void GotCoin(int coinValue)
 	{
 		Debug.Log("in GotCoin");
 
 		//increment score and display
-		score++;
-		GameControl.Instance.setScore(score);
+		GameControl.Instance.increaseScore (coinValue);
+		int score = GameControl.Instance.getScore ();
 		scoreText.text = "Score: " + score;
 		Debug.Log("Score: " + score);
 
-		//check if need to level up, if score is greater or equal to 10
+		//level up if got 10 points on current level
 		if (score >= targetScore) 
 		{
-			//increment level and display
-			level++;
-			GameControl.Instance.setLevel(level);
 			Debug.Log("Level up!");
-			Debug.Log("Level: " + level);
-
-			//if level is not greater than 4
-			if (level <= 4) 
-			{
-				//load the next level
-				SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
-				//Debug.Log(score);
-				Debug.Log("in GotCoin stmt after loading new scene");
-				//TODO Display on top right or left LEVEL (level)
-			}
-
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+			//TODO Display on top right or left LEVEL (level)
+			
 			//TODO if level is 4 (or greater just in case) 
 			//Display Game Over/ You Won etc.
 			//end scene etc
 		}
-
-		
-		
 	}
 
 }

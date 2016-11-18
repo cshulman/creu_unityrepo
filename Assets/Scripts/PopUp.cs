@@ -4,28 +4,28 @@ using System.Collections;
 
 public class PopUp : MonoBehaviour {
 
-	public GameObject mySecondCanvas;
+	public GameObject myQestionObject;
 
 	public void Awake()
 	{
-		if (mySecondCanvas == null)
+		if (myQestionObject == null)
 		{
-			mySecondCanvas = GameObject.Find("QuestionCanvas");
-			print ("I tried");
+			myQestionObject = GameObject.Find("questionObject");
 			//print (mySecondCanvas.ToString());
+			myQestionObject = new GameObject();
 		}
 	}
 
     //activate canvas
 	public void activateCanvas() {
-        mySecondCanvas.SetActive(true);
+        myQestionObject.SetActive(true);
 	}
 
 	//to deactivate window when button is clicked
 	public void OnClickButton(string choice) {
         if( choice == "continue") {
-            mySecondCanvas.SetActive(false);
-            Destroy(mySecondCanvas);
+            myQestionObject.SetActive(false);
+            Destroy(myQestionObject);
         }
 }
 

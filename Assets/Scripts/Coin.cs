@@ -4,6 +4,9 @@ using System.Collections;
 
 public class Coin : MonoBehaviour {
 
+	//for now, all coins give player 1 point!
+	public int COINVALUE = 1;
+
     public PopUp popupInstance;
 
 	// Use this for initialization
@@ -34,7 +37,7 @@ public class Coin : MonoBehaviour {
 			popupInstance.activateCanvas();
 
 			//function so can keep track of all coins caught
-			other.GetComponent<ScoreKeeper>().GotCoin ();
+			other.GetComponent<ScoreKeeper>().GotCoin (COINVALUE);
 			//popupInstance.activateCanvas();
 
 			Destroy(gameObject);
