@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 
 public class PopUp : MonoBehaviour {
 
 	public GameObject myQestionObject;
+	public Text questionText;
 
 	public void Awake()
 	{
@@ -14,6 +16,7 @@ public class PopUp : MonoBehaviour {
 			//print (mySecondCanvas.ToString());
 			myQestionObject = new GameObject();
 		}
+		questionText.text = "My question goes here!";
 	}
 
     //activate canvas
