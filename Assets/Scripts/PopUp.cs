@@ -5,32 +5,47 @@ using UnityEngine.UI;
 
 public class PopUp : MonoBehaviour {
 
-	public GameObject myQestionObject;
+	public GameObject myQuestionObject;
 	public Text questionText;
+	//public Button myButton;
 
 	public void Awake()
 	{
-		if (myQestionObject == null)
+		if (myQuestionObject == null)
 		{
-			myQestionObject = GameObject.Find("questionObject");
+			myQuestionObject = GameObject.Find("questionCanvas");
 			//print (mySecondCanvas.ToString());
-			myQestionObject = new GameObject();
+			//myQuestionObject = new GameObject(); //Flo did this, not sure why. DK deleted. 
+			Debug.Log("In game object find");
 		}
+		/*if (myQuestionObject == null)
+		{
+			myQuestionObject = GetComponent("questionCanvas");
+			Debug.Log("In find component");
+		}*/
+		// Button btn = myButton.GetComponent<Button>();
+		// btn.onClick.AddListener(OnClickButton);
 		questionText.text = "My question goes here!";
+		 //gameObject.enableChildren(false);
+
 	}
 
     //activate canvas
 	public void activateCanvas() {
-        myQestionObject.SetActive(true);
+        myQuestionObject.SetActive(true);
 	}
 
+	//shoud be called when button is clicked
 	//to deactivate window when button is clicked
-	public void OnClickButton(string choice) {
-        if( choice == "continue") {
-            myQestionObject.SetActive(false);
-            Destroy(myQestionObject);
-        }
-}
+	/*public void OnClickButton(string choice) {
+        //if( choice == "continue") {
+        	Debug.Log("You have clicked the button");
+        	//this.gameObject.SetActive(false);
+            //myQuestionObject.SetActive(false);
+            //Debug.Log(IsActive);
+            //Destroy(myQuestionObject);
+       // }*/
+//}
 
 	// public Rect windowRect = new Rect(200, 100, 500, 300);
 
@@ -53,6 +68,10 @@ public class PopUp : MonoBehaviour {
 	// void Update () {
 	
 	// }
+     public void DisableCoin()
+     {
+     	this.gameObject.SetActive(false);
+     }
 }
 
 

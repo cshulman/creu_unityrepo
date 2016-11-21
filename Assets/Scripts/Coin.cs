@@ -7,40 +7,38 @@ public class Coin : MonoBehaviour {
 	//for now, all coins give player 1 point!
 	public int COINVALUE = 1;
 
-    public PopUp popupInstance;
+	public PopUp questionPopUp;
 
 	// Use this for initialization
 	void Start () {
+		//GameObject canvas = GetComponent<questionCanvas>();
+		//canvas.enabled = false;
 
-		if (popupInstance == null)
+		if (questionPopUp == null)
 		{
-			popupInstance = GetComponent<PopUp>();
+			questionPopUp = GetComponent<PopUp>();
 		}
-		if (popupInstance == null)
+		if (questionPopUp == null)
 		{
 			print ("null popup");
 		}
-
-
-	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	// void Update () {
 	
-	}
+	// }
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if(other.gameObject.CompareTag("Player"))
 		{   
-			popupInstance.activateCanvas();
-
 			//function so can keep track of all coins caught
 			other.GetComponent<ScoreKeeper>().GotCoin (COINVALUE);
-			//popupInstance.activateCanvas();
+			questionPopUp.activateCanvas();
 
-			Destroy(gameObject);
+			//Destroy(questionPopUp);
+			//this.gameObject.SetActive(false);
 		}
 	}		
 }
