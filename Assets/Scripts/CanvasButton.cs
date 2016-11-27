@@ -33,9 +33,10 @@ public class CanvasButton : MonoBehaviour {
         	Debug.Log("You have clicked the button");
             myQuestionObject.SetActive(false); //TODO!
             PopUp pop = GetComponentInParent<PopUp>();
-            pop.DisableCoin();
-            //Debug.Log(IsActive);
-       // }
+            bool isCorrectAnswer = pop.verifyAnswer();
+            if(isCorrectAnswer){
+            	pop.DisableCoin();
+            }
 	}
 
 

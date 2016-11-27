@@ -59,7 +59,7 @@ GameObject:
   - 222: {fileID: 222000012892425552}
   - 114: {fileID: 114000011576233734}
   - 114: {fileID: 114000013414210924}
-  - 114: {fileID: 114000012910093694}
+  - 114: {fileID: 114000013631490368}
   m_Layer: 5
   m_Name: questionCanvas
   m_TagString: Untagged
@@ -438,13 +438,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114000011691692936}
   toggleTransition: 1
   graphic: {fileID: 114000011311846780}
-  m_Group: {fileID: 114000012910093694}
+  m_Group: {fileID: 114000013631490368}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!114 &114000010978205634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -516,13 +516,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114000013562085288}
   toggleTransition: 1
   graphic: {fileID: 114000013026903422}
-  m_Group: {fileID: 114000012910093694}
+  m_Group: {fileID: 114000013631490368}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!114 &114000011048401300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -725,7 +725,8 @@ MonoBehaviour:
   choiceB: {fileID: 114000013709661044}
   choiceC: {fileID: 114000013730467188}
   choiceD: {fileID: 114000010979800150}
-  questionChoicesGroup: {fileID: 114000012910093694}
+  questionChoicesGroup: {fileID: 114000013631490368}
+  answer: B
 --- !u!114 &114000011691692936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -880,18 +881,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   COINVALUE: 1
   questionPopUp: {fileID: 114000011626113990}
---- !u!114 &114000012910093694
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010886666964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1184210157, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AllowSwitchOff: 0
 --- !u!114 &114000013026903422
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -973,6 +962,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114000013631490368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010886666964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1184210157, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AllowSwitchOff: 0
 --- !u!114 &114000013709661044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1011,13 +1012,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114000013726677952}
   toggleTransition: 1
   graphic: {fileID: 114000013788173006}
-  m_Group: {fileID: 114000012910093694}
+  m_Group: {fileID: 114000013631490368}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!114 &114000013726677952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1083,13 +1084,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114000011479641266}
   toggleTransition: 1
   graphic: {fileID: 114000014242376738}
-  m_Group: {fileID: 114000012910093694}
+  m_Group: {fileID: 114000013631490368}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!114 &114000013788173006
 MonoBehaviour:
   m_ObjectHideFlags: 1

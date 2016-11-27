@@ -1,4 +1,13 @@
-﻿using UnityEngine;
+﻿/*
+PopUp script sets conditions for pop up question
+by setting off all toggles first and setting them to a toggle group so only 1 can be on at a time
+
+PopUp script belongs to Coin and activates canvas when hero collides with coin
+PopUp script deactivates the coin
+
+*/
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -12,6 +21,7 @@ public class PopUp : MonoBehaviour {
 	public Toggle choiceC;
 	public Toggle choiceD;
 	public ToggleGroup questionChoicesGroup;
+	public string answer;
 	//public Button myButton;
 
 	public void Awake()
@@ -44,6 +54,8 @@ public class PopUp : MonoBehaviour {
 		choiceB.isOn = false;
 		choiceC.isOn = false;
 		choiceD.isOn = false;
+
+		answer = "B";
 	}
 
     //activate canvas
@@ -51,43 +63,18 @@ public class PopUp : MonoBehaviour {
         myQuestionObject.SetActive(true);
 	}
 
-	//shoud be called when button is clicked
-	//to deactivate window when button is clicked
-	/*public void OnClickButton(string choice) {
-        //if( choice == "continue") {
-        	Debug.Log("You have clicked the button");
-        	//this.gameObject.SetActive(false);
-            //myQuestionObject.SetActive(false);
-            //Debug.Log(IsActive);
-            //Destroy(myQuestionObject);
-       // }*/
-//}
 
-	// public Rect windowRect = new Rect(200, 100, 500, 300);
+    //all components have a gameObject they are attached to
+    //use gameObject to deactivate coin
+    public void DisableCoin()
+    {
+   	    this.gameObject.SetActive(false);
+    }
 
- //    void OnGUI() {
- //        windowRect = GUI.Window(0, windowRect, DoMyWindow, "My Window");
- //    }
+    public bool verifyAnswer() {
+    	return true;
+    }
 
- //    void DoMyWindow(int windowID) {
- //        if (GUI.Button(new Rect(200, 100, 500, 300), "Hello World"))
- //            print("Got a click");
-        
- //    }
-
-	// // Use this for initialization
-	// void Start () {
-	
-	// }
-	
-	// // Update is called once per frame
-	// void Update () {
-	
-	// }
-     public void DisableCoin()
-     {
-     	this.gameObject.SetActive(false);
-     }
 }
 
 
