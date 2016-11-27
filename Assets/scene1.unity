@@ -395,6 +395,10 @@ Prefab:
       propertyPath: m_Name
       value: HUDCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011376217300, guid: 3a343c49750384bd185e93cb76a1ed46, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a343c49750384bd185e93cb76a1ed46, type: 2}
   m_IsPrefabParent: 0
@@ -582,22 +586,6 @@ Prefab:
     - target: {fileID: 4000012144166866, guid: 0580a155e30fe43d8a861ff230de8301, type: 2}
       propertyPath: m_RootOrder
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000014110413702, guid: 0580a155e30fe43d8a861ff230de8301,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000013269199896, guid: 0580a155e30fe43d8a861ff230de8301,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011119299212, guid: 0580a155e30fe43d8a861ff230de8301,
-        type: 2}
-      propertyPath: m_Text
-      value: Choose the correct statement to define a 1d array of pointers to double
-        with 10 elements.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0580a155e30fe43d8a861ff230de8301, type: 2}

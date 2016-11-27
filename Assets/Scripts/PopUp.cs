@@ -7,6 +7,11 @@ public class PopUp : MonoBehaviour {
 
 	public GameObject myQuestionObject;
 	public Text questionText;
+	public Toggle choiceA;
+	public Toggle choiceB;
+	public Toggle choiceC;
+	public Toggle choiceD;
+	public ToggleGroup questionChoicesGroup;
 	//public Button myButton;
 
 	public void Awake()
@@ -25,9 +30,20 @@ public class PopUp : MonoBehaviour {
 		}*/
 		// Button btn = myButton.GetComponent<Button>();
 		// btn.onClick.AddListener(OnClickButton);
-		questionText.text = "My question goes here!";
+		questionText.text = "Choose the correct statement to define a 1d array of pointers to double with 10 elements.";
 		 //gameObject.enableChildren(false);
 
+		//assign toggle group to all multiple choices
+		choiceA.group = questionChoicesGroup;
+		choiceB.group = questionChoicesGroup;
+		choiceC.group = questionChoicesGroup;
+		choiceD.group = questionChoicesGroup;
+
+		//start off with no toggle on
+		choiceA.isOn = false;
+		choiceB.isOn = false;
+		choiceC.isOn = false;
+		choiceD.isOn = false;
 	}
 
     //activate canvas

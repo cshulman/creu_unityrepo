@@ -721,6 +721,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myQuestionObject: {fileID: 1000010886666964}
   questionText: {fileID: 114000011119299212}
+  choiceA: {fileID: 114000010544217780}
+  choiceB: {fileID: 114000013709661044}
+  choiceC: {fileID: 114000013730467188}
+  choiceD: {fileID: 114000010979800150}
+  questionChoicesGroup: {fileID: 114000012910093694}
 --- !u!114 &114000011691692936
 MonoBehaviour:
   m_ObjectHideFlags: 1
