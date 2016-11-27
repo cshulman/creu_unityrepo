@@ -43,7 +43,7 @@ public class CanvasButton : MonoBehaviour {
             	pop.wrongAnswer();
             } else if(userResponse == "no answer given"){
             	Debug.Log("User submitted no answer");
-            	//do nothing
+            	pop.noAnswer();
             }
 	}
 

@@ -16,6 +16,7 @@ public class PopUp : MonoBehaviour {
 
 	public GameObject myQuestionObject;
 	public Text questionText;
+	public Text feedbackText;
 	public Toggle choiceA;
 	public Toggle choiceB;
 	public Toggle choiceC;
@@ -44,6 +45,9 @@ public class PopUp : MonoBehaviour {
 		// Button btn = myButton.GetComponent<Button>();
 		// btn.onClick.AddListener(OnClickButton);
 		questionText.text = "Choose the correct statement to define a 1d array of pointers to double with 10 elements.";
+
+		//no feedback to begin with
+		feedbackText.text = "";
 		 //gameObject.enableChildren(false);
 
 		//assign toggle group to all multiple choices
@@ -104,13 +108,19 @@ public class PopUp : MonoBehaviour {
    
     //if wrong answer is given, turn off all toggles to try again
     public void wrongAnswer(){
+    	feedbackText.text = "Wrong. Try again.";
     	choiceA.isOn = false;
 		choiceB.isOn = false;
 		choiceC.isOn = false;
 		choiceD.isOn = false;
     }
 
+    public void noAnswer(){
+    	feedbackText.text = "You must submit an answer.";
+    }
+
 }
+
 
 
 
