@@ -25,7 +25,6 @@ GameObject:
   - 222: {fileID: 222000012892425552}
   - 114: {fileID: 114000011576233734}
   - 114: {fileID: 114000013414210924}
-  - 114: {fileID: 114000011355693666}
   m_Layer: 5
   m_Name: questionCanvas
   m_TagString: Untagged
@@ -217,18 +216,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: My question goes here!
---- !u!114 &114000011355693666
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010886666964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92ecd1959e4d94dbc844709cb2585c5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myQuestionObject: {fileID: 1000010886666964}
 --- !u!114 &114000011576233734
 MonoBehaviour:
   m_ObjectHideFlags: 1
