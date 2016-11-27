@@ -727,6 +727,9 @@ MonoBehaviour:
   choiceD: {fileID: 114000010979800150}
   questionChoicesGroup: {fileID: 114000013631490368}
   answer: B
+  CORRECT: correct
+  INCORRECT: incorrect
+  NO_ANSWER: no answer given
 --- !u!114 &114000011691692936
 MonoBehaviour:
   m_ObjectHideFlags: 1

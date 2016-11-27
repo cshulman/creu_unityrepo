@@ -29,15 +29,20 @@ public class CanvasButton : MonoBehaviour {
 	note that questionCanvas is a child of Coin
 	*/
 	public void OnClickButton(string choice) {
-        //if( choice == "continue") {
         	Debug.Log("You have clicked the button");
             myQuestionObject.SetActive(false); //TODO!
             PopUp pop = GetComponentInParent<PopUp>();
-            bool isCorrectAnswer = pop.verifyAnswer();
-            if(isCorrectAnswer){
+            string userResponse = pop.verifyAnswer();
+            if(userResponse == "correct"){
+            	Debug.Log("Correct answer was given!");
             	pop.DisableCoin();
+            } else if(userResponse == "incorrect"){
+            	Debug.Log("Incorrect answer was given");
+            	pop.wrongAnswer();
+            } else if(userResponse == "no answer given"){
+            	Debug.Log("User submitted no answer");
+            	//do nothing
             }
 	}
-
 
 }

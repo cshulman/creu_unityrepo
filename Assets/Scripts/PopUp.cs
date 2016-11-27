@@ -22,6 +22,9 @@ public class PopUp : MonoBehaviour {
 	public Toggle choiceD;
 	public ToggleGroup questionChoicesGroup;
 	public string answer;
+	public string CORRECT = "correct";
+	public string INCORRECT = "incorrect";
+	public string NO_ANSWER = "no answer given";
 	//public Button myButton;
 
 	public void Awake()
@@ -71,8 +74,40 @@ public class PopUp : MonoBehaviour {
    	    this.gameObject.SetActive(false);
     }
 
-    public bool verifyAnswer() {
-    	return true;
+    public string verifyAnswer() {
+    	Debug.Log("Which toggles are on:");
+    	Debug.Log("choiceA on? " + choiceA.isOn);
+    	Debug.Log("choiceB on? " + choiceB.isOn);
+    	Debug.Log("choiceC on? " + choiceC.isOn);
+    	Debug.Log("choiceD on? " + choiceD.isOn);
+    	if(choiceA.isOn == true && answer == "A"){
+    		return CORRECT;
+    	} else if(choiceA.isOn == true && answer != "A"){
+    		return INCORRECT;
+    	} else if(choiceB.isOn == true && answer == "B"){
+    		return CORRECT;
+    	} else if (choiceB.isOn == true && answer != "B"){
+    		return INCORRECT;
+    	} else if(choiceC.isOn == true && answer == "C"){
+    		return CORRECT;
+    	} else if(choiceC.isOn == true && answer != "C"){
+    		return INCORRECT;
+    	} else if(choiceD.isOn == true && answer == "D"){
+    		return CORRECT;
+    	} else if(choiceD.isOn == true && answer != "D"){
+    		return INCORRECT;
+    	} else {
+    		//no answer was chosen
+    		return NO_ANSWER;
+    	}
+    }
+   
+    //if wrong answer is given, turn off all toggles to try again
+    public void wrongAnswer(){
+    	choiceA.isOn = false;
+		choiceB.isOn = false;
+		choiceC.isOn = false;
+		choiceD.isOn = false;
     }
 
 }
