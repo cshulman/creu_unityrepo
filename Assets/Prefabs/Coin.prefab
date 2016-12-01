@@ -389,6 +389,7 @@ GameObject:
   - 114: {fileID: 114000012730862908}
   - 114: {fileID: 114000011626113990}
   - 114: {fileID: 114000012884706484}
+  - 114: {fileID: 114000010491335950}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -509,6 +510,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.64
+--- !u!114 &114000010491335950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013914846462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01228932e53e24cedb4e4153af86ce70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxQuestPerLevel: 0
+  maxFactPerLevel: 0
 --- !u!114 &114000010492945678
 MonoBehaviour:
   m_ObjectHideFlags: 1
