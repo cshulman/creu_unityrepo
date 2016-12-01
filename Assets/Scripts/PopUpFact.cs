@@ -25,6 +25,7 @@ public class PopUpFact : MonoBehaviour {
 	}
 
 	public void activatePopUpFact() {
+		Time.timeScale = 0.0f;
 		myFactObject.SetActive(true);
 
 	}

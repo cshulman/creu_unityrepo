@@ -29,6 +29,7 @@ public class continueButton : MonoBehaviour {
 	*/
 	public void OnClickContinue() {
         	Debug.Log("You have clicked the continue button");
+        	Time.timeScale = 1.0f; //undo pause
         	eduFactObject.SetActive(false);
 	}
 
