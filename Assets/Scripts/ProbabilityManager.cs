@@ -24,7 +24,7 @@ public class ProbabilityManager : MonoBehaviour {
 	method returns PopUp type: fact or question
 	TODO: first time should never be question
 	*/
-	public void getPopUpType() {
+	public PopUpType getPopUpType() {
 		/*if question
 		PopUp pop = GetComponentInParent<PopUp>();
 		pop.ActivateCanvas();
@@ -32,5 +32,6 @@ public class ProbabilityManager : MonoBehaviour {
 		//if fact 
 		PopUpFact factpop = GetComponentInParent<PopUpFact>();
 		factpop.activatePopUpFact();
+		return PopUpType.FACT;
 	}
 }

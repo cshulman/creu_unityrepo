@@ -1179,7 +1179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   COINVALUE: 1
-  questionPopUp: {fileID: 114000011626113990}
 --- !u!114 &114000012876309068
 MonoBehaviour:
   m_ObjectHideFlags: 1

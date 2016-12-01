@@ -7,21 +7,19 @@ public class Coin : MonoBehaviour {
 	//for now, all coins give player 1 point!
 	public int COINVALUE = 1;
 
-	public PopUp questionPopUp;
-
 	// Use this for initialization
 	void Start () {
 		//GameObject canvas = GetComponent<questionCanvas>();
 		//canvas.enabled = false;
 
-		if (questionPopUp == null)
-		{
-			questionPopUp = GetComponent<PopUp>();
-		}
-		if (questionPopUp == null)
-		{
-			print ("null popup");
-		}
+		// if (questionPopUp == null)
+		// {
+		// 	questionPopUp = GetComponent<PopUp>();
+		// }
+		// if (questionPopUp == null)
+		// {
+		// 	print ("null popup");
+		// }
 	}
 	
 	// Update is called once per frame
@@ -33,9 +31,15 @@ public class Coin : MonoBehaviour {
 	{
 		if(other.gameObject.CompareTag("Player"))
 		{   
-			//function so can keep track of all coins caught
-			other.GetComponent<ScoreKeeper>().GotCoin (COINVALUE);
-			questionPopUp.activateCanvas();
+			ProbabilityManager probManager = GetComponentInParent<ProbabilityManager>();
+			ProbabilityManager.PopUpType popType = probManager.getPopUpType();
+			//only increase score if got question
+			if( popType == ProbabilityManager.PopUpType.QUESTION ){
+				other.GetComponent<ScoreKeeper>().GotCoin (COINVALUE);
+			}
+			
+			
+
 
 			//Destroy(questionPopUp);
 			//this.gameObject.SetActive(false);

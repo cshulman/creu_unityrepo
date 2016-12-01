@@ -29,4 +29,11 @@ public class PopUpFact : MonoBehaviour {
 		myFactObject.SetActive(true);
 
 	}
+
+	//all components have a gameObject they are attached to
+    //use gameObject to deactivate coin
+    public void DisableCoin()
+    {
+   	    this.gameObject.SetActive(false);
+    }
 }
