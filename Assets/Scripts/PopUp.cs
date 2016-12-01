@@ -65,8 +65,9 @@ public class PopUp : MonoBehaviour {
 		answer = "B";
 	}
 
-    //activate canvas
+    //activate canvas and pause game
 	public void activateCanvas() {
+		Time.timeScale = 0.0f;
         myQuestionObject.SetActive(true);
 	}
 

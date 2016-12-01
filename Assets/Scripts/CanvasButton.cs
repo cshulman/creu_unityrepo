@@ -36,6 +36,7 @@ public class CanvasButton : MonoBehaviour {
             string userResponse = pop.verifyAnswer();
             if(userResponse == "correct"){
             	Debug.Log("Correct answer was given!");
+            	Time.timeScale = 1.0f; //undo pause
             	myQuestionObject.SetActive(false);
             	pop.DisableCoin();
             } else if(userResponse == "incorrect"){
