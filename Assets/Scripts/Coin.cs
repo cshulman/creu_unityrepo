@@ -34,8 +34,12 @@ public class Coin : MonoBehaviour {
 			ProbabilityManager probManager = GetComponentInParent<ProbabilityManager>();
 			ProbabilityManager.PopUpType popType = probManager.getPopUpType();
 			//only increase score if got question
-			if( popType == ProbabilityManager.PopUpType.QUESTION ){
-				other.GetComponent<ScoreKeeper>().GotCoin (COINVALUE);
+			if (popType == ProbabilityManager.PopUpType.QUESTION) {
+				//double points for questions
+				other.GetComponent<ScoreKeeper> ().GotCoin (2 * COINVALUE);
+			} else {
+				//one point for all others
+				other.GetComponent<ScoreKeeper> ().GotCoin (COINVALUE);
 			}
 			
 			

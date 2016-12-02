@@ -47,20 +47,20 @@ public class PopUp : MonoBehaviour {
 		questionText.text = "Choose the correct statement to define a 1d array of pointers to double with 10 elements.";
 
 		//no feedback to begin with
-		feedbackText.text = " ";
+		//feedbackText.text = " ";
 		 //gameObject.enableChildren(false);
 
 		//assign toggle group to all multiple choices
-		choiceA.group = questionChoicesGroup;
-		choiceB.group = questionChoicesGroup;
-		choiceC.group = questionChoicesGroup;
-		choiceD.group = questionChoicesGroup;
-
-		//start off with no toggle on
-		choiceA.isOn = false;
-		choiceB.isOn = false;
-		choiceC.isOn = false;
-		choiceD.isOn = false;
+//		choiceA.group = questionChoicesGroup;
+//		choiceB.group = questionChoicesGroup;
+//		choiceC.group = questionChoicesGroup;
+//		choiceD.group = questionChoicesGroup;
+//
+//		//start off with no toggle on
+//		choiceA.isOn = false;
+//		choiceB.isOn = false;
+//		choiceC.isOn = false;
+//		choiceD.isOn = false;
 
 		answer = "B";
 	}
