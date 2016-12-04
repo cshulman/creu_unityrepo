@@ -25,13 +25,22 @@ public class ProbabilityManager : MonoBehaviour {
 	TODO: first time should never be question
 	*/
 	public PopUpType getPopUpType() {
-		/*if question
-		PopUp pop = GetComponentInParent<PopUp>();
-		pop.ActivateCanvas();
-		*/
-		//if fact 
-		PopUpFact factpop = GetComponentInParent<PopUpFact>();
-		factpop.activatePopUpFact();
-		return PopUpType.FACT;
+		
+		int popUpType = Random.Range (0, 5);
+
+		if (popUpType < 2) {
+			
+			PopUp pop = GetComponentInParent<PopUp> ();
+			pop.activateCanvas ();
+			return PopUpType.QUESTION;
+			
+		} else {
+			
+			PopUpFact factpop = GetComponentInParent<PopUpFact>();
+			factpop.activatePopUpFact();
+			return PopUpType.FACT;
+		}
+
+
 	}
 }

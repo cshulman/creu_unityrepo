@@ -16,9 +16,11 @@ public class SpawnCoins : MonoBehaviour {
 	{
 		for(int i = 0; i < coinSpawns.Length; i++)
 		{
-			int coinFlip = Random.Range (0, 2);
+			int coinFlip = Random.Range (0, 10);
 
-			if (coinFlip > 0)
+			//TODO
+			//adjust probability
+			if (coinFlip == 0)
 				Instantiate (coin, coinSpawns [i].position, Quaternion.identity);
 		}			
 	}
