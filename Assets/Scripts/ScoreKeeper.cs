@@ -18,7 +18,8 @@ public class ScoreKeeper : MonoBehaviour {
 		Debug.Log("in ScoreKeeper's start");
 
 		index = SceneManager.GetActiveScene ().buildIndex;
-		targetScore = 10 * (index + 1);
+		targetScore = 10;
+		//targetScore = 10 * (index + 1);
 		Debug.Log("index + 1: " + (index +1));
 		Debug.Log("targetScore: " + targetScore);
 
@@ -39,6 +40,7 @@ public class ScoreKeeper : MonoBehaviour {
 		//level up if got 10 points on current level
 		if (score >= targetScore) 
 		{
+			targetScore -= 10;
 			Debug.Log("Level up!");
 			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 			//TODO Display on top right or left LEVEL (level)

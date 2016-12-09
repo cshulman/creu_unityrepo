@@ -1,25 +1,38 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.IO;
+using System;
+
 
 public class Questions : MonoBehaviour {
 
 	public TextAsset questionData;
 
 	// Use this for initialization
-	void Start () {
-		questionData = Resources.Load ("unityQuestions.txt") as TextAsset;
+	public void Start () {
+		
+	}
+
+	public string getQuestion(){
+
+		//questionData = Resources.Load ("Assets/QuestionsFolder/unityQuestions.txt") as TextAsset;
+
+		//questionData = Resources.Load ("unityQuestions.txt") as TextAsset;
 
 		string str = questionData.text;
+
+		//need to change 
 		string[] questions = str.Split(new[] {'\n','\r'});
 
 		foreach (string str1 in questions) {
-			print(str1);
+			Debug.Log(str1);
 			//return str1;
 		}
-			
-		//return "empty string";
-	}
 
+		//TODO
+		print(questions[0]);
+		return questions[0];
+	}
 	// Update is called once per frame
 	void Update () {
 

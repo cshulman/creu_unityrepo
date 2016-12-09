@@ -28,14 +28,34 @@ public class PopUp : MonoBehaviour {
 	public string NO_ANSWER = "no answer given";
 	//public Button myButton;
 
+	//edit
+	public string question1;
+
+	public Questions questManage;
+
+	public void Start()
+	{
+		if (questManage == null) {
+			questManage = this.GetComponent<Questions> ();
+		}
+		if (questManage == null) {
+			print ("not working");
+		} else {
+			print ("working");
+		}
+
+		question1 = questManage.getQuestion();
+
+		questionText.text = question1;
+	}
+
 	public void Awake()
 	{
-		if (myQuestionObject == null)
-		{
-			myQuestionObject = GameObject.Find("questionCanvas");
+		if (myQuestionObject == null) {
+			myQuestionObject = GameObject.Find ("questionCanvas");
 			//print (mySecondCanvas.ToString());
 			//myQuestionObject = new GameObject(); //Flo did this, not sure why. DK deleted. 
-			Debug.Log("In game object find");
+			Debug.Log ("In game object find");
 		}
 		/*if (myQuestionObject == null)
 		{
@@ -44,7 +64,18 @@ public class PopUp : MonoBehaviour {
 		}*/
 		// Button btn = myButton.GetComponent<Button>();
 		// btn.onClick.AddListener(OnClickButton);
-		questionText.text = "Choose the correct statement to define a 1d array of pointers to double with 10 elements.";
+
+		//ProbabilityManager probManager = GetComponentInParent<ProbabilityManager>();
+		//ProbabilityManager.PopUpType popType = probManager.getPopUpType();
+
+		//Questions questManage = GetComponentInParent<Questions>();
+
+		/////////////////////////
+//		question1 = questManage.getQuestion();
+//
+//		questionText.text = question1;
+
+		//Debug.Log("questionText set to choose etc.");
 
 		//no feedback to begin with
 		//feedbackText.text = " ";

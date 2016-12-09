@@ -16,7 +16,7 @@ public class SpawnCoins : MonoBehaviour {
 	{
 		for(int i = 0; i < coinSpawns.Length; i++)
 		{
-			int coinFlip = Random.Range (0, 10);
+			int coinFlip = Random.Range (0, 5);
 
 			//TODO
 			//adjust probability

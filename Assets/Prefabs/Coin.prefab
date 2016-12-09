@@ -390,6 +390,7 @@ GameObject:
   - 114: {fileID: 114000011626113990}
   - 114: {fileID: 114000012884706484}
   - 114: {fileID: 114000010491335950}
+  - 114: {fileID: 114000010101828452}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -510,6 +511,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.64
+--- !u!114 &114000010101828452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013914846462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aef12f4857924d9181c0977a111b2d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionData: {fileID: 4900000, guid: 8b3112b558c184f3ca05cff65ffcf6e6, type: 3}
 --- !u!114 &114000010491335950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -947,6 +960,8 @@ MonoBehaviour:
   CORRECT: correct
   INCORRECT: incorrect
   NO_ANSWER: no answer given
+  question1: 
+  questManage: {fileID: 0}
 --- !u!114 &114000011691692936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1315,7 +1330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8897059, g: 0.6541955, b: 0.6541955, a: 1}
+  m_Color: {r: 0.8897059, g: 0.947, b: 0.084, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
