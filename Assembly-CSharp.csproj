@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Coin.cs" />
      <Compile Include="Assets\Scripts\DeathTrigger.cs" />
      <Compile Include="Assets\Scripts\GameControl.cs" />
+     <Compile Include="Assets\Scripts\PauseResumeButtons.cs" />
      <Compile Include="Assets\Scripts\PlatformFall.cs" />
      <Compile Include="Assets\Scripts\PopUp.cs" />
      <Compile Include="Assets\Scripts\PopUpFact.cs" />

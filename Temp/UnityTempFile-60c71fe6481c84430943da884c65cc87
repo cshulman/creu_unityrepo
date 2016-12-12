@@ -87,6 +87,7 @@
 'Assets/Scripts/Coin.cs'
 'Assets/Scripts/DeathTrigger.cs'
 'Assets/Scripts/GameControl.cs'
+'Assets/Scripts/PauseResumeButtons.cs'
 'Assets/Scripts/PlatformFall.cs'
 'Assets/Scripts/PopUp.cs'
 'Assets/Scripts/PopUpFact.cs'
