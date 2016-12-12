@@ -31,12 +31,12 @@ public class PopUp : MonoBehaviour {
 	//edit
 	public string question1;
 
-	public Questions questManage;
+	public QuestionReader questManage;
 
 	public void Start()
 	{
 		if (questManage == null) {
-			questManage = this.GetComponent<Questions> ();
+			questManage = this.GetComponent<QuestionReader> ();
 		}
 		if (questManage == null) {
 			print ("not working");

@@ -4,25 +4,24 @@ using System.IO;
 using System;
 
 
-public class Questions : MonoBehaviour {
+public class QuestionReader : MonoBehaviour {
 
 	public TextAsset questionData;
 
 	// Use this for initialization
 	public void Start () {
-		
+
 	}
 
 	public string getQuestion(){
 
 		//questionData = Resources.Load ("Assets/QuestionsFolder/unityQuestions.txt") as TextAsset;
-
 		//questionData = Resources.Load ("unityQuestions.txt") as TextAsset;
 
 		string str = questionData.text;
 
 		//need to change 
-		string[] questions = str.Split(new[] {'\n','\r'});
+		string[] questions = str.Split(new[] {'\n','\r'} );
 
 		foreach (string str1 in questions) {
 			Debug.Log(str1);

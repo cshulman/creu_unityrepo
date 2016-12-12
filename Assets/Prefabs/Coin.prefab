@@ -390,7 +390,7 @@ GameObject:
   - 114: {fileID: 114000011626113990}
   - 114: {fileID: 114000012884706484}
   - 114: {fileID: 114000010491335950}
-  - 114: {fileID: 114000010101828452}
+  - 114: {fileID: 114000010101672934}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -511,7 +511,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.64
---- !u!114 &114000010101828452
+--- !u!114 &114000010101672934
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013914846462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aef12f4857924d9181c0977a111b2d8, type: 3}
+  m_Script: {fileID: 11500000, guid: e3c5a683c08a14a61b086e983f2cb34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   questionData: {fileID: 4900000, guid: 8b3112b558c184f3ca05cff65ffcf6e6, type: 3}
@@ -536,6 +536,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxQuestPerLevel: 0
   maxFactPerLevel: 0
+  QUESTIONPROB: 6
+  FACTPROB: 4
+  firstCoin: 0
 --- !u!114 &114000010492945678
 MonoBehaviour:
   m_ObjectHideFlags: 1
